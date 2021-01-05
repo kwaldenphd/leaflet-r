@@ -275,7 +275,7 @@ Map
 
 ```R
 ## Read in the Happy Planet data
-happiness <- read.csv('https://raw.githubusercontent.com/kwaldenphd/leaflet-r/main/HappyPlanet.csv', stringsAsFactors = FALSE)
+happiness <- read.csv('https://raw.githubusercontent.com/kwaldenphd/leaflet-r/main/data/HappyPlanet.csv', stringsAsFactors = FALSE)
 
 ## Join the Happy Planet data to the countries in WorldCountry
 CountryHappy <- left_join(data.frame(Name = WorldCountry$name), happiness, by = c("Name" ="Country"))
@@ -404,7 +404,7 @@ For this question you should create a map with the following features:
   * Hint: Use the argument `bringToFront = FALSE` in your highlight to avoid masking the city labels when hovering over a state.
 
 ```R
-shapeurl <- "https://raw.githubusercontent.com/kwaldenphd/leaflet-r/main/us-states.json"
+shapeurl <- "https://raw.githubusercontent.com/kwaldenphd/leaflet-r/main/data/us-states.json"
 UnitedStates <- geojson_read(shapeurl, what = "sp")
 data("USArrests")
 data("us_cities")
